@@ -1,0 +1,5 @@
+Rogue Maker is top-down  2D roguelike with drag-and-drop level editor (inspired by Super Mario Maker https://en.wikipedia.org/wiki/Super_Mario_Maker). A creator lays out floor tiles, walls, hazards, monsters, starting gear and one or more victory conditions (collect all coins, defeat every enemy, reach the exit, etc.). 
+
+Gameplay is turn-synchronous (inspired by Crypt of the Necrodancer https://store.steampowered.com/app/247080/Crypt_of_the_NecroDancer/ but I'm bad at rhythm, so no rhythm): whenever the player performs an action, all monsters simultaneously execute their own moves. Each monster type carries a distinct decision routine—chaser, shooter, patrol, random wanderer, etc. Before launching a run the player may accept the level designer's recommended weapon / armour / relic set or swap in any unlocked items.
+
+I'll run each enemy's turn asynchronously in parallel, so their moves are computed at the same time. Async is just the first advanced C# feature I'm planning. Others will be added as the project develops.
