@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="GameTextures" format=3 uid="uid://qw0204jj0yt3"]
+
+[ext_resource type="Script" uid="uid://birckh0lg45b7" path="res://Visuals/GameTextures.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dkvdqllkxssdy" path="res://Assets/Textures/Surfaces/Floor.png" id="2_floor"]
+[ext_resource type="Texture2D" uid="uid://b1w3fm7nvd4km" path="res://Assets/Textures/Surfaces/Wall.png" id="3_wall"]
+[ext_resource type="Texture2D" uid="uid://dvssyaywuhe44" path="res://Assets/Textures/Surfaces/Pit.png" id="4_pit"]
+[ext_resource type="Texture2D" uid="uid://cugtcj54vgp3b" path="res://Assets/Textures/Surfaces/Void.png" id="5_void"]
+[ext_resource type="Texture2D" uid="uid://cv5wbbunetwnt" path="res://Assets/Textures/Surfaces/Exit.png" id="6_exit"]
+[ext_resource type="Texture2D" uid="uid://behmqu7jk6mha" path="res://Assets/Textures/Player/Player.png" id="7_player"]
+[ext_resource type="Texture2D" uid="uid://c4jk4nii6yh7p" path="res://Assets/Textures/Enemies/Bat.png" id="8_bat"]
+[ext_resource type="Texture2D" uid="uid://beonaici17jrs" path="res://Assets/Textures/Enemies/Slime.png" id="9_slime"]
+[ext_resource type="Texture2D" uid="uid://dhgmx1com3eit" path="res://Assets/Textures/Enemies/Skeleton.png" id="10_skeleton"]
+
+[resource]
+script = ExtResource("1_script")
+Player = ExtResource("7_player")
+Surfaces = Dictionary[int, Texture2D]({
+0: ExtResource("2_floor"),
+1: ExtResource("3_wall"),
+2: ExtResource("4_pit"),
+3: ExtResource("5_void"),
+4: ExtResource("6_exit")
+})
+Enemies = Dictionary[int, Texture2D]({
+1: ExtResource("8_bat"),
+2: ExtResource("9_slime"),
+3: ExtResource("10_skeleton")
+})

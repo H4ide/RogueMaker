@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://danbb8lvi88i6"]
+
+[ext_resource type="Script" uid="uid://cj8emky8rwtih" path="res://UI/LevelBuilder/LevelBuilder.cs" id="1_script"]
+[ext_resource type="Script" uid="uid://beokr68pyy38b" path="res://UI/LevelBuilder/LevelGrid.cs" id="2_level_grid"]
+[ext_resource type="Resource" uid="uid://qw0204jj0yt3" path="res://Assets/Textures/GameTextures.tres" id="3_game_textures"]
+[ext_resource type="Script" uid="uid://dkeo30juphve4" path="res://UI/LevelBuilder/LevelEditorView.cs" id="4_editor_view"]
+
+[node name="LevelBuilder" type="Control" unique_id=1420145778]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+Textures = ExtResource("3_game_textures")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=21482587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Layout" type="VBoxContainer" parent="MarginContainer" unique_id=1476781426]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=1273602197]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/Layout/TopBar" unique_id=682897131]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Back"
+
+[node name="SizeSetup" type="CenterContainer" parent="MarginContainer/Layout" unique_id=777816536]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Fields" type="VBoxContainer" parent="MarginContainer/Layout/SizeSetup" unique_id=371423765]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MarginContainer/Layout/SizeSetup/Fields" unique_id=1025606007]
+layout_mode = 2
+text = "Level size"
+horizontal_alignment = 1
+
+[node name="WidthRow" type="HBoxContainer" parent="MarginContainer/Layout/SizeSetup/Fields" unique_id=623311322]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="WidthLabel" type="Label" parent="MarginContainer/Layout/SizeSetup/Fields/WidthRow" unique_id=743240264]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Width"
+
+[node name="WidthSpinBox" type="SpinBox" parent="MarginContainer/Layout/SizeSetup/Fields/WidthRow" unique_id=1320301902]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+value = 20.0
+rounded = true
+
+[node name="HeightRow" type="HBoxContainer" parent="MarginContainer/Layout/SizeSetup/Fields" unique_id=856825489]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeightLabel" type="Label" parent="MarginContainer/Layout/SizeSetup/Fields/HeightRow" unique_id=1928113605]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Height"
+
+[node name="HeightSpinBox" type="SpinBox" parent="MarginContainer/Layout/SizeSetup/Fields/HeightRow" unique_id=745494989]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+value = 12.0
+rounded = true
+
+[node name="CreateButton" type="Button" parent="MarginContainer/Layout/SizeSetup/Fields" unique_id=644361304]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create"
+
+[node name="EditorWorkspace" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=1602405682]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="ToolPalette" type="VBoxContainer" parent="MarginContainer/Layout/EditorWorkspace" unique_id=1160677504]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SaveButton" type="Button" parent="MarginContainer/Layout/EditorWorkspace/ToolPalette" unique_id=585884293]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="SaveStatus" type="Label" parent="MarginContainer/Layout/EditorWorkspace/ToolPalette" unique_id=1859590616]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SaveSeparator" type="HSeparator" parent="MarginContainer/Layout/EditorWorkspace/ToolPalette" unique_id=505665203]
+layout_mode = 2
+
+[node name="ToolsLabel" type="Label" parent="MarginContainer/Layout/EditorWorkspace/ToolPalette" unique_id=1166933748]
+layout_mode = 2
+text = "Tools"
+horizontal_alignment = 1
+
+[node name="ToolList" type="ItemList" parent="MarginContainer/Layout/EditorWorkspace/ToolPalette" unique_id=1133129350]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EditorViewportContainer" type="SubViewportContainer" parent="MarginContainer/Layout/EditorWorkspace" unique_id=435807887]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="EditorViewport" type="SubViewport" parent="MarginContainer/Layout/EditorWorkspace/EditorViewportContainer" unique_id=648370653]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 0
+
+[node name="LevelGrid" type="Control" parent="MarginContainer/Layout/EditorWorkspace/EditorViewportContainer/EditorViewport" unique_id=657631326]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("2_level_grid")
+
+[node name="EditorView" type="Camera2D" parent="MarginContainer/Layout/EditorWorkspace/EditorViewportContainer/EditorViewport" unique_id=645787550]
+unique_name_in_owner = true
+script = ExtResource("4_editor_view")

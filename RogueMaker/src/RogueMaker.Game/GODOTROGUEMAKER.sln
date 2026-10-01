@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37328.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotRogueMaker", "GodotRogueMaker.csproj", "{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B54BCF4B-CEE7-41F0-9F88-00FCE9F7107D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40C47497-D9A3-445D-9FC2-BE109E83873B}
+	EndGlobalSection
+EndGlobal
